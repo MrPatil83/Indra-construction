@@ -37,16 +37,17 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/buy-now" element={<BuyNow />} /> */}
       </Routes>
+      <Footer />
     </Router>
   );
 }

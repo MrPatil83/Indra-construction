@@ -33,7 +33,7 @@
 // export default Home;
 
 // import TopInfo from "../components/TopInfo";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import HeroSection from "../components/CustomSlider";
 import ServicesSection from "../components/ServiceCards";
 import HeroSecond from "../components/HeroSecond";
@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main className="">
       {/* <TopInfo /> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <HeroSecond />
       <ServicesSection />
