@@ -1,7 +1,7 @@
 // import React from "react";
 import { motion } from "framer-motion";
 
-const WhyChooseUs = () => {
+const Whychoose = () => {
   return (
     <section id="why_choose_us" className="relative">
       <div className="container mx-auto">
@@ -151,4 +151,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default Whychoose;
