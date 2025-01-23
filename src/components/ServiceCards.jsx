@@ -145,10 +145,9 @@
 //   description: PropTypes.string.isRequired,
 //   index: PropTypes.number.isRequired,
 // };
-import PropTypes from "prop-types";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaArrowRightLong } from "react-icons/fa6";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const services = [
   {
@@ -234,12 +233,12 @@ function ServiceCard({ icon, title, description, index }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <div className="absolute top-0 right-0 w-24 h-24 opacity-20">
+      <div className="absolute top-0 right-0 w-24 h-24 opacity-30">
         <div className="absolute inset-0">
           {Array.from({ length: 5 }).map((_, i) => (
             <div
               key={i}
-              className="absolute right-0 h-px w-12 bg-white group-hover:bg-gray-400"
+              className="absolute right-0 h-px w-12 bg-white group-hover:bg-orange-600"
               style={{
                 top: `${i * 6}px`,
                 transform: "rotate(-45deg)",
@@ -250,17 +249,20 @@ function ServiceCard({ icon, title, description, index }) {
         </div>
       </div>
       <div className="relative z-10 space-y-6">
-        <div
-          className={`text-white group-hover:text-orange-600 transition duration-300 ${
-            isHovered ? "text-orange-600" : ""
-          }`}
+        <motion.div
+          animate={{
+            filter: isHovered
+              ? "invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(118%) contrast(119%)"
+              : "none",
+          }}
+          transition={{ duration: 0.3 }}
         >
           <img
             src={icon || "/placeholder.svg"}
             alt={title}
             className="w-12 h-12"
           />
-        </div>
+        </motion.div>
         <h3 className="text-2xl font-bold text-orange-600 group-hover:text-gray-900">
           {title}
         </h3>
@@ -274,7 +276,20 @@ function ServiceCard({ icon, title, description, index }) {
             animate={{ opacity: isHovered ? 0 : 1, x: isHovered ? 16 : 0 }}
           >
             <div className="w-12 h-12 bg-[#09316F] flex items-center justify-center">
-              <FaArrowRightLong className="w-6 h-6 text-white" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
             </div>
           </motion.div>
           <motion.div

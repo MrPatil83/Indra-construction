@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import footerLogo from "../../assets/footerLogo.webp";
+import footerLogo from "../../assets/Logo/Logo.webp";
 const ContactSection = () => {
   const [email, setEmail] = useState("");
 
@@ -262,7 +262,7 @@ const ContactSection = () => {
                     href="#"
                     className="hover:text-[#FF4B26] transition-colors"
                   >
-                    FAQ's
+                    FAQs
                   </a>
                 </li>
                 <li>
