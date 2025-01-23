@@ -3,6 +3,7 @@ import ServicesSection from "../components/ServiceCards";
 import HeroSecond from "../components/HeroSecond";
 import HeroForm from "../components/HeroForm";
 import HeroExploreproject from "../components/HeroExploreproject";
+import WhyChooseUs from "../components/WhychooseUs";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesSection />
       <HeroForm />
       <HeroExploreproject />
+      <WhyChooseUs />
     </main>
   );
 }
