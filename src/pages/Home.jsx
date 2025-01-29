@@ -4,6 +4,7 @@ import HeroSecond from "../components/HeroSecond";
 import HeroForm from "../components/HeroForm";
 import HeroExploreproject from "../components/HeroExploreproject";
 import Whychoose from "../components/Whychoose";
+import FAQSection from "../components/FAQSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroForm />
       <HeroExploreproject />
       <Whychoose />
+      <FAQSection />
     </main>
   );
 }
